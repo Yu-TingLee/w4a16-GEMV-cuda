@@ -8,7 +8,7 @@
 
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 
 constexpr int kWarpSize = 32;
 
@@ -127,4 +127,4 @@ KernelInfo kernel_info(Kernel kernel, int threads_per_block) {
           {"warps_per_sm", blocks_per_sm * threads_per_block / kWarpSize}};
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

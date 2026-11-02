@@ -317,7 +317,7 @@ wheels = [
 ]
 
 [[package]]
-name = "int4-gemv-cuda"
+name = "w4a16-gemv-cuda"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

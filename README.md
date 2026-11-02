@@ -1,10 +1,10 @@
-INT4 GEMV Kernels in CUDA
+W4A16 GEMV Kernels in CUDA
 =======================
 CUDA kernels for W4A16 GEMV (4-bit weights, FP16 activations), compared with FP16 cuBLAS on an RTX 3090. The weights stay packed in memory and are unpacked in registers inside the kernel. At batch 1, our fastest kernel is **2.9–3.3× faster than FP16 cuBLAS** on real Llama-3 weight matrices, close to the 3.76× limit set by the byte savings.
 
 Kernels
 ------------
-Weights are quantized with plain round-to-nearest to 4 bits, in groups of 128 with an FP16 scale and zero per group, and packed eight to a 32-bit word (`int4gemv/quant.py`).
+Weights are quantized with plain round-to-nearest to 4 bits, in groups of 128 with an FP16 scale and zero per group, and packed eight to a 32-bit word (`w4a16gemv/quant.py`).
 
 | Kernel | Mapping |
 | --- | --- |
@@ -47,7 +47,7 @@ Repository Layout
 ```
 csrc/        CUDA kernels (naive.cu, coalesced.cu, vectorized.cu), loads-only diagnostic,
              input checks, CPU version, pybind bindings
-int4gemv/    Quantize/pack, Python reference, loader for the built module
+w4a16gemv/    Quantize/pack, Python reference, loader for the built module
 bench/       Timing harness, real-layer loader, batch sweep, block-size sweep, loads-only test,
              Nsight Compute profile, plots
 ```

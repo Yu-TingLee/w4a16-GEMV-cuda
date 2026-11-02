@@ -2,7 +2,7 @@
 
 import torch
 
-from int4gemv.quant import dequantize
+from w4a16gemv.quant import dequantize
 
 
 def w4a16_reference(x, qweight, scales, zeros, group_size: int) -> torch.Tensor:

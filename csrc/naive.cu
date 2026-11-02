@@ -9,7 +9,7 @@
 #include "common.cuh"
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 namespace {
 
 constexpr int kThreadsPerBlock = 128;
@@ -97,4 +97,4 @@ KernelInfo naive_info(int64_t m) {
   return info;
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

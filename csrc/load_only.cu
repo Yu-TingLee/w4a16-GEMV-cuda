@@ -10,7 +10,7 @@
 #include "common.cuh"
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 namespace {
 
 // Computes no GEMV: it issues the vectorized kernel's loads at M = 1 and xors the loaded bits into
@@ -91,4 +91,4 @@ at::Tensor load_only(const at::Tensor& x, const at::Tensor& qweight, const at::T
   return out;
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

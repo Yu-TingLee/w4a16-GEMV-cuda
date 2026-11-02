@@ -15,9 +15,9 @@ GPU = pick_idle_gpu()
 
 import torch  # noqa: E402
 
-from int4gemv import ops  # noqa: E402
-from int4gemv.quant import GROUP_SIZE, quantize  # noqa: E402
-from int4gemv.reference import assert_matches_reference, w4a16_reference  # noqa: E402
+from w4a16gemv import ops  # noqa: E402
+from w4a16gemv.quant import GROUP_SIZE, quantize  # noqa: E402
+from w4a16gemv.reference import assert_matches_reference, w4a16_reference  # noqa: E402
 
 BATCHES = [1, 8]
 LAYER = "llama3_70b_q"

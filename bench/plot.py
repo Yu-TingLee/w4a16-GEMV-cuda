@@ -15,7 +15,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import seaborn as sns  # noqa: E402
 
-from int4gemv.quant import GROUP_SIZE, bits_per_weight  # noqa: E402
+from w4a16gemv.quant import GROUP_SIZE, bits_per_weight  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"

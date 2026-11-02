@@ -4,7 +4,7 @@
 
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 
 void check_inputs(const char* name, const at::Tensor& x, const at::Tensor& qweight,
                   const at::Tensor& scales, const at::Tensor& zeros, int64_t group_size,
@@ -43,4 +43,4 @@ void check_inputs(const char* name, const at::Tensor& x, const at::Tensor& qweig
   }
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

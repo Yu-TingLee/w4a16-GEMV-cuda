@@ -19,7 +19,7 @@ from pathlib import Path
 
 from bench.layers import LAYERS, load
 from bench.timing import gpu_snapshot, pick_idle_gpu, write_csv
-from int4gemv.quant import GROUP_SIZE
+from w4a16gemv.quant import GROUP_SIZE
 
 OUTPUTS = Path(__file__).resolve().parents[1] / "outputs"
 BATCHES = [1, 2, 4, 8, 16, 32]
@@ -52,8 +52,8 @@ def workload():
     """Launch each config's kernel exactly once. Correctness is checked by the sweep."""
     import torch
 
-    from int4gemv import ops
-    from int4gemv.quant import quantize
+    from w4a16gemv import ops
+    from w4a16gemv.quant import quantize
 
     torch.manual_seed(0)
     weights = {}

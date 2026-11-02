@@ -9,7 +9,7 @@
 #include "common.cuh"
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 namespace {
 
 // Computes y[m0 ... m0 + kTileM - 1, row] for one weight row per warp (one-warp blocks): lane l
@@ -99,4 +99,4 @@ KernelInfo coalesced_info(int64_t m) {
   return info;
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

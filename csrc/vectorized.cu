@@ -10,7 +10,7 @@
 #include "common.cuh"
 #include "w4a16.h"
 
-namespace int4gemv {
+namespace w4a16gemv {
 namespace {
 
 // Computes y[m0 ... m0 + kTileM - 1, row0 ... row0 + kRowsPerWarp - 1] for kRowsPerWarp weight
@@ -167,4 +167,4 @@ KernelInfo vectorized_info(int64_t m, int64_t threads_per_block, int64_t rows_pe
   return info;
 }
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

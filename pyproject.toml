@@ -1,5 +1,5 @@
 [project]
-name = "int4-gemv-cuda"
+name = "w4a16-gemv-cuda"
 version = "0.1.0"
 description = "W4A16 GEMV CUDA kernels, step by step, with bandwidth analysis"
 requires-python = ">=3.11,<3.14"

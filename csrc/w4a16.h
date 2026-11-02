@@ -14,7 +14,7 @@
 //   scales   [N, K / group]  fp16
 //   zeros    [N, K / group]  fp16
 // and return y [M, N] fp16 (empty if M or N is 0). Wrong dtypes, shapes or devices throw.
-namespace int4gemv {
+namespace w4a16gemv {
 
 // Registers, spills (local_bytes) and theoretical occupancy of one compiled kernel.
 using KernelInfo = std::map<std::string, int64_t>;
@@ -51,4 +51,4 @@ void check_inputs(const char* name, const at::Tensor& x, const at::Tensor& qweig
                   const at::Tensor& scales, const at::Tensor& zeros, int64_t group_size,
                   c10::DeviceType device);
 
-}  // namespace int4gemv
+}  // namespace w4a16gemv

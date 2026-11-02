@@ -22,9 +22,9 @@ GPU = pick_idle_gpu()
 import torch  # noqa: E402
 import torch.nn.functional as F  # noqa: E402
 
-from int4gemv import ops  # noqa: E402
-from int4gemv.quant import GROUP_SIZE, quantize  # noqa: E402
-from int4gemv.reference import assert_matches_reference, w4a16_reference  # noqa: E402
+from w4a16gemv import ops  # noqa: E402
+from w4a16gemv.quant import GROUP_SIZE, quantize  # noqa: E402
+from w4a16gemv.reference import assert_matches_reference, w4a16_reference  # noqa: E402
 
 BATCHES = [1, 2, 4, 8, 16, 32]
 RESULTS = Path(__file__).resolve().parents[1] / "outputs"
